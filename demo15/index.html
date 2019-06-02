@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+      <div class="bubbles" num="50" duration="3">
+        <!-- <div class="bubble" style="transform: translate(100px, 0) scale(2)"></div>
+        <div class="bubble" style="transform: translate(200px, 0) scale(3)"></div> -->
+      </div>
+    </div>
+</body>
+<script>
+  (function(w, d) {
+    var bubbles = d.querySelector('.bubbles');
+    var bubblesWidth = bubbles.clientWidth;
+    var num = bubbles.getAttribute('num');
+    var duration = bubbles.getAttribute('duration');
+    bubbleUp()
+    setInterval(bubbleUp, duration * 1000);
+
+    function bubbleUp() {
+      for(var i = 0; i < num ; i++) {
+        var bubbleDiv = d.createElement('div')
+        bubbleDiv.classList.add('bubble');
+        bubbleDiv.style.cssText = `
+          transform: translate(${bubblesWidth * Math.random()}px, 0) scale(${5 * Math.random()});
+          animation: up ${duration * Math.random() + 1}s ease-in-out;
+        `;
+        bubbles.appendChild(bubbleDiv);
+      }
+    }
+  })(window, document);
+</script>
+</html>

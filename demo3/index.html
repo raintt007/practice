@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i>Show Login Form</div>
+  <div class="login-box">
+          <div class="hide-login-btn"><i class="fas fa-times"></i></div>
+    <from class="login-form" action="index.html" method="post">
+      <h1>Welcome</h1>
+      <input class="txtb" type="text" name="" placeholder="Username">
+      <input class="txtb" type="password" name="" placeholder="password">
+      <input class="login-btn type="submit" name="" value="Login">
+    </from>
+  </div>
+  <script type="text/javascript">
+    document.getElementsByClassName("show-login-btn")[0].addEventListener("click", () => {
+      document.getElementsByClassName("login-box")[0].classList.add("showed")
+    })
+    document.getElementsByClassName("hide-login-btn")[0].addEventListener("click", () => {
+      document.getElementsByClassName("login-box")[0].classList.remove("showed")
+    })
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- owl-carousel 幻灯片插件的人物信息展示 jQuery 幻灯片特效
+它可以让你创建漂亮的响应式旋转木马的 jQuery 插件，
+它支持移动触摸屏，有丰富的参数设置，甚至可以嵌入视频，
+功能十分强大。 -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, inital-scale-1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="testtimonial-section">
+      <div class="inner-width">
+        <h1>What Client Says</h1>
+        <div class="border"></div>
+        <div class="slides owl-carousel">
+          <div class="testtimonial">
+            <div class="test-info">
+              <img class="test-pic" src="1.jpg" alt="">
+              <div class="test-name">
+                <span>Client1</span>
+                @client1
+              </div>
+            </div>
+            <p>
+              Hello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello World
+            </p>
+          </div>
+
+          <div class="testtimonial">
+            <div class="test-info">
+              <img class="test-pic" src="2.png" alt="">
+              <div class="test-name">
+                <span>Client2</span>
+                @client2
+              </div>
+            </div>
+            <p>
+              Hello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello World
+            </p>
+          </div>
+
+          <div class="testtimonial">
+            <div class="test-info">
+              <img class="test-pic" src="3.png" alt="">
+              <div class="test-name">
+                <span>Client3</span>
+                @client3
+              </div>
+            </div>
+            <p>
+              Hello WorldHello WorldHello WorldHello WorldHello WorldHello WorldHello World
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      margin:10,
+      responsiveClass: true,
+      responsive:{
+        0:{
+          items: 1
+        },
+        680:{
+          items: 2
+        },
+        960:{
+          items: 3
+        }
+      }
+    });
+  </script>
+</html>
